@@ -1,9 +1,15 @@
 # -*- coding: utf-8 -*-
+"""
+This is a copy of the defaul.py file to be converted using numpy
+
+"""
 from collections import Counter
 from copy import deepcopy
 from math import sqrt
 from random import sample as random_sample
 from string import ascii_uppercase
+
+import numpy as np
 
 
 class SudokuBoard(object):

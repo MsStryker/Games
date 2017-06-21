@@ -61,7 +61,10 @@ class SudokuBoard(object):
         return initial_list
 
     def get_initial_matrix(self):
-        """Create the matrix for the board"""
+        """Create the matrix for the board
+        
+        TODO: convert this to a numpy array
+        """
         board_list = self.board_list
         initial_matrix = [board_list]
         for i in range(1, self.size):
@@ -93,7 +96,13 @@ class SudokuBoard(object):
         return self.board
 
     def swap_columns(self):
-        """Swap the columns and return the board"""
+        """Swap the columns and return the board
+        
+        Using numpy swap the columns, where the following is an
+        example of swapping the first and second column.
+        
+        TODO: a[:,[0,1]] = a[:,[1,0]]
+        """
         board = self.board
         swap_list = range(0, self.size)
         for i in range(0, self.size, self.base):
@@ -106,7 +115,13 @@ class SudokuBoard(object):
                     row[swap[0]], row[swap[1]] = row[swap[1]], row[swap[0]]
 
     def swap_rows(self):
-        """Swap the rows and return the board"""
+        """Swap the rows and return the board
+        
+        Using numpy swap the rows, where the following is an 
+        example of swapping the first and second row.
+        
+        TODO: a[[0,1]] = a[[1,0]]
+        """
         board = self.board
         swap_list = range(0, self.size)
         for i in range(0, self.size, self.base):

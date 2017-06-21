@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-This is a copy of the defaul.py file to be converted using numpy
+This is a copy of the default.py file to be converted/updated using numpy
 
 """
 from collections import Counter
